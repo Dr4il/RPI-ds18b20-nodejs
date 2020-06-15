@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  security:
+    image: 
+    working_dir: 
+    environment:
+      SENSOR: 
+    volumes:
+      - ./build:/app
