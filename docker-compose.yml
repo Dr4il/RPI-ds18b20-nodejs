@@ -1,10 +1,16 @@
 version: '3.4'
 
 services:
-  security:
-    image: 
-    working_dir: 
+  mongodb:
+    image: mongo
+    container: db
     environment:
-      SENSOR: 
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: temperature
     volumes:
-      - ./build:/app
+      - ./mongo-db:/data/db
+    ports:
+      - '27017-27019:27017-27019'
+
+  
