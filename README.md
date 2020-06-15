@@ -1,1 +1,1 @@
-# RPI-ds18b20-nodejs
+# RPI-ds18b20-node
