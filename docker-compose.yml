@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  mongodb:
+    image: bitnami/mongodb
+    container_name: db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: temperature
+    volumes:
+      - ./mongo-db:/data/dbconfig
+    ports:
+      - '27017:27017'
+      - '28017:28017'  
